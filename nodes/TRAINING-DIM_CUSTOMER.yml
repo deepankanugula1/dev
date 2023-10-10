@@ -60,7 +60,7 @@ steps:
               - columnReferences:
                   - columnCounter: 2c16ee19-65f9-47a9-ae8b-693a201c7eb7
                     stepCounter: a88effa6-9b91-47e2-8c9c-0f68a5e9f5f8
-                transform: ""
+                transform: UPPER ("STG_CUSTOMER"."C_NAME")
           - columnReference:
               columnCounter: a6b68f4d-2ac4-4162-9fc0-fa6058f43f18
               stepCounter: 19d5269a-c011-443d-a574-5b277d758064
@@ -75,7 +75,7 @@ steps:
               - columnReferences:
                   - columnCounter: e4e98192-cb17-4c42-86e7-7c94433c0716
                     stepCounter: a88effa6-9b91-47e2-8c9c-0f68a5e9f5f8
-                transform: ""
+                transform: UPPER ("STG_CUSTOMER"."C_ADDRESS")
           - columnReference:
               columnCounter: ec250421-520a-430c-b6a1-e1bd50c823dd
               stepCounter: 19d5269a-c011-443d-a574-5b277d758064
@@ -89,7 +89,7 @@ steps:
               - columnReferences:
                   - columnCounter: 0ede63ff-66c4-40c6-abfb-e97772b77e98
                     stepCounter: a88effa6-9b91-47e2-8c9c-0f68a5e9f5f8
-                transform: ""
+                transform: UPPER ("STG_CUSTOMER"."C_NATIONKEY")
           - columnReference:
               columnCounter: 56db926d-403a-40ae-aa03-db92a1528dce
               stepCounter: 19d5269a-c011-443d-a574-5b277d758064
@@ -104,7 +104,7 @@ steps:
               - columnReferences:
                   - columnCounter: 9c5f10fd-02f1-4e5a-97fd-a4cc11af88b6
                     stepCounter: a88effa6-9b91-47e2-8c9c-0f68a5e9f5f8
-                transform: ""
+                transform: UPPER ("STG_CUSTOMER"."C_PHONE")
           - columnReference:
               columnCounter: b18a7877-2280-44d2-88af-c515df2c2c7e
               stepCounter: 19d5269a-c011-443d-a574-5b277d758064
@@ -118,7 +118,7 @@ steps:
               - columnReferences:
                   - columnCounter: fb87ef5f-c060-4fbc-a3c1-4ba9c0490299
                     stepCounter: a88effa6-9b91-47e2-8c9c-0f68a5e9f5f8
-                transform: ""
+                transform: UPPER ("STG_CUSTOMER"."C_ACCTBAL")
           - columnReference:
               columnCounter: fd854aa9-08c8-49e2-b9c9-91bfd6de5554
               stepCounter: 19d5269a-c011-443d-a574-5b277d758064

@@ -14,7 +14,13 @@ steps:
       locationName: TRAINING
       materializationType: table
       metadata:
-        appliedNodeTests: []
+        appliedNodeTests:
+          - continueOnFailure: true
+            description: ""
+            name: Test
+            runOrder: After
+            templateString: |
+              SELECT * FROM {{ ref_no_link('Training','STG_CUSTOMER')}} WHERE C_NATIONKEY > 0
         columns:
           - columnReference:
               columnCounter: 379995f3-313e-4768-8cc6-c3cbe18ee726
@@ -73,7 +79,7 @@ steps:
               - columnReferences:
                   - columnCounter: 6668b45c-62f9-4f3e-84b8-ef739137e7c3
                     stepCounter: b5bba575-bf27-4579-b30d-63c1d4488246
-                transform: ""
+                transform: "{{even_odd('\"CUSTOMER\".\"C_NATIONKEY\"')}}"
           - columnReference:
               columnCounter: 9c5f10fd-02f1-4e5a-97fd-a4cc11af88b6
               stepCounter: a88effa6-9b91-47e2-8c9c-0f68a5e9f5f8
