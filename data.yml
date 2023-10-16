@@ -1,6 +1,13 @@
 defaultStorageMapping: TARGET
 installedPackages: {}
-jobs: {}
+jobs:
+  Job-2:
+    excludeSelector: "{ location: SOURCE name: DIMSHIPMODE } OR { location: SOURCE name: DIMSEGMENT } OR { location: SOURCE name: DIMPRODUCT } OR { location: SOURCE name: DIMGEO } OR { location: TARGET name: DIM_DIMGEO } OR { location: SOURCE name: DIM_DIMPRODUCT } OR { location: TARGET name: DIM_DIMSEGMENT } OR { location: TARGET name: DIM_DIMSHIPMODE } OR { location: TARGET name: STG_DIMGEO } OR { location: TARGET name: STG_DIMPRODUCT } OR { location: TARGET name: STG_DIMSEGMENT } OR { location: SOURCE name: STG_DIMSHIPMODE }"
+    id: 2
+    includeSelector: "{nodeType:Stage} OR { location: TARGET name: STG_RETURN } OR { location: SOURCE name: RETURN } OR { location: SOURCE name: ECOMMERCE } OR { location: TARGET name: FCT_ECOMMERCE } OR { location: TARGET name: FCT_RETURN }"
+    name: Fact Refresh
+    steps: []
+    subgraphs: []
 locations:
   SOURCE:
     mappingDefinitions:
