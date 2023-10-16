@@ -1,0 +1,68 @@
+steps:
+  DIM_DIMSEGMENT-d25bdd51-484f-49c3-96a7-08d26988aa83:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - appliedColumnTests:
+              isDistinct: false
+            columnReference:
+              columnCounter: 571e140e-2733-4aef-b9b5-859bc4ff39aa
+              stepCounter: d25bdd51-484f-49c3-96a7-08d26988aa83
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 499c2d7e-1d06-49ef-8240-264e45ff810a
+                    stepCounter: ad621abc-c563-4934-b171-1efda1242ac3
+                transform: ""
+          - appliedColumnTests:
+              isDistinct: false
+            columnReference:
+              columnCounter: a527b422-8fa0-4fc3-8ad0-e42dd2aa4e34
+              stepCounter: d25bdd51-484f-49c3-96a7-08d26988aa83
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SEGMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aedc96da-0786-4470-a137-72c82f34458f
+                    stepCounter: ad621abc-c563-4934-b171-1efda1242ac3
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs:
+          - isDistinct
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: STG_DIMSEGMENT
+            join:
+              joinCondition: FROM {{ ref('TARGET', 'STG_DIMSEGMENT') }} "STG_DIMSEGMENT"
+            name: DIM_DIMSEGMENT
+            noLinkRefs: []
+      name: DIM_DIMSEGMENT
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: d25bdd51-484f-49c3-96a7-08d26988aa83

@@ -1,0 +1,111 @@
+steps:
+  DIM_DIMGEO-441cba57-6a11-4c95-8b4c-6ae469b260cf:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 519eb6fb-8b41-45d5-9160-f699cb37e412
+              stepCounter: 441cba57-6a11-4c95-8b4c-6ae469b260cf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1b6ddcd1-4936-4b2f-a92b-8c41154a78ad
+                    stepCounter: 175d921a-9ca8-4d3f-8962-179f10821133
+                transform: ""
+          - columnReference:
+              columnCounter: d91cb54f-14f2-440a-92c2-aba87523f5e8
+              stepCounter: 441cba57-6a11-4c95-8b4c-6ae469b260cf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a609b1cf-e8c7-472d-b750-f0555bfd10ec
+                    stepCounter: 175d921a-9ca8-4d3f-8962-179f10821133
+                transform: ""
+          - columnReference:
+              columnCounter: 748a2747-c1dc-4e2c-85bc-0fff700ccdb5
+              stepCounter: 441cba57-6a11-4c95-8b4c-6ae469b260cf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3f1d7478-ecfa-4007-9ace-599bc99444b0
+                    stepCounter: 175d921a-9ca8-4d3f-8962-179f10821133
+                transform: ""
+          - columnReference:
+              columnCounter: 78481295-8b7f-4f02-81e8-794daf0ca5cd
+              stepCounter: 441cba57-6a11-4c95-8b4c-6ae469b260cf
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d85ef8c-c051-4c50-8f79-598dd5244522
+                    stepCounter: 175d921a-9ca8-4d3f-8962-179f10821133
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1ddd5c87-8fc2-40d5-9bc9-1d4fdbf1f7b1
+              stepCounter: 441cba57-6a11-4c95-8b4c-6ae469b260cf
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            hashDetails:
+              hashAlgorithm: SHA1
+            hashedColumns:
+              - columnCounter: 519eb6fb-8b41-45d5-9160-f699cb37e412
+                stepCounter: 441cba57-6a11-4c95-8b4c-6ae469b260cf
+            isBusinessKey: true
+            name: Key
+            nullable: true
+            sourceColumnReferences: []
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: STG_DIMGEO
+            join:
+              joinCondition: FROM {{ ref('TARGET', 'STG_DIMGEO') }} "STG_DIMGEO"
+            name: DIM_DIMGEO
+            noLinkRefs: []
+      name: DIM_DIMGEO
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: 441cba57-6a11-4c95-8b4c-6ae469b260cf

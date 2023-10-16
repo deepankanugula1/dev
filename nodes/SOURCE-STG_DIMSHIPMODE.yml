@@ -1,0 +1,64 @@
+steps:
+  STG_DIMSHIPMODE-2a94fc78-e7b0-471d-81c5-2fae50627fba:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: SOURCE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0dee2bd9-7418-45e1-8cd6-1323a7db0715
+              stepCounter: 2a94fc78-e7b0-471d-81c5-2fae50627fba
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1760aec2-a33e-4d84-9877-b5bde963ab49
+                    stepCounter: fd3c8619-d3af-4909-9540-7a4f4814d7aa
+                transform: ""
+          - columnReference:
+              columnCounter: a8d59d05-8697-4422-9207-7609049ebd73
+              stepCounter: 2a94fc78-e7b0-471d-81c5-2fae50627fba
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIPMODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f58d34ce-d99c-40f1-906d-b8572825177a
+                    stepCounter: fd3c8619-d3af-4909-9540-7a4f4814d7aa
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: DIMSHIPMODE
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'DIMSHIPMODE') }} "DIMSHIPMODE"
+            name: STG_DIMSHIPMODE
+            noLinkRefs: []
+      name: STG_DIMSHIPMODE
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 2a94fc78-e7b0-471d-81c5-2fae50627fba

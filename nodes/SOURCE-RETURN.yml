@@ -1,0 +1,79 @@
+steps:
+  RETURN-cdac615d-9142-471d-a9da-ce9eec9720d5:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cc0d568f-0eb3-49b9-a12d-846668aa794e
+              stepCounter: cdac615d-9142-471d-a9da-ce9eec9720d5
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: ORDERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 424acad3-35ca-4e66-a095-5b0dfd1f11b9
+              stepCounter: cdac615d-9142-471d-a9da-ce9eec9720d5
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: CUSTOMERNAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a505c5b9-1abd-493f-be4e-7c1090445052
+              stepCounter: cdac615d-9142-471d-a9da-ce9eec9720d5
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: RETURNS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a03bf66c-c6c0-4065-8645-ef6ee02d072f
+              stepCounter: cdac615d-9142-471d-a9da-ce9eec9720d5
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: SALESAMOUNT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'RETURN') }}
+      name: RETURN
+      schema: ""
+      sqlType: Source
+      table: RETURN
+      type: sourceInput
+    stepCounter: cdac615d-9142-471d-a9da-ce9eec9720d5

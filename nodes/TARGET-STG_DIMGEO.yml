@@ -1,0 +1,92 @@
+steps:
+  STG_DIMGEO-175d921a-9ca8-4d3f-8962-179f10821133:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 1b6ddcd1-4936-4b2f-a92b-8c41154a78ad
+              stepCounter: 175d921a-9ca8-4d3f-8962-179f10821133
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c060f4b8-0af6-4790-a7b8-6c5a64c66e47
+                    stepCounter: 7ca2c715-60e8-41f3-8dae-0ae6da56842d
+                transform: ""
+          - columnReference:
+              columnCounter: a609b1cf-e8c7-472d-b750-f0555bfd10ec
+              stepCounter: 175d921a-9ca8-4d3f-8962-179f10821133
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 57f152a2-8541-45f4-96ab-76c0ed242c8b
+                    stepCounter: 7ca2c715-60e8-41f3-8dae-0ae6da56842d
+                transform: ""
+          - columnReference:
+              columnCounter: 3f1d7478-ecfa-4007-9ace-599bc99444b0
+              stepCounter: 175d921a-9ca8-4d3f-8962-179f10821133
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COUNTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e8429ca4-4d4d-4ed8-826a-62e9010bce3d
+                    stepCounter: 7ca2c715-60e8-41f3-8dae-0ae6da56842d
+                transform: ""
+          - columnReference:
+              columnCounter: 1d85ef8c-c051-4c50-8f79-598dd5244522
+              stepCounter: 175d921a-9ca8-4d3f-8962-179f10821133
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: REGION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7d43cfc4-35c4-4e40-85ee-5f7d8e09432a
+                    stepCounter: 7ca2c715-60e8-41f3-8dae-0ae6da56842d
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: DIMGEO
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'DIMGEO') }} "DIMGEO"
+            name: STG_DIMGEO
+            noLinkRefs: []
+      name: STG_DIMGEO
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 175d921a-9ca8-4d3f-8962-179f10821133

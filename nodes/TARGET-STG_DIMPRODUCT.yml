@@ -1,0 +1,78 @@
+steps:
+  STG_DIMPRODUCT-7a1678be-3139-44e4-b1a9-52f2f1e775df:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 69b26353-08c5-4d9b-9bab-d9758d8f0b13
+              stepCounter: 7a1678be-3139-44e4-b1a9-52f2f1e775df
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3fda4f90-5780-457b-8fb4-47db5953f838
+                    stepCounter: 5a42978a-ff38-4f6d-a2ea-315e49b8a832
+                transform: ""
+          - columnReference:
+              columnCounter: da42887b-43ac-40b0-9d08-9faf51c2ce35
+              stepCounter: 7a1678be-3139-44e4-b1a9-52f2f1e775df
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCTCATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a267874e-aaa5-43eb-bd74-5700e5b61dad
+                    stepCounter: 5a42978a-ff38-4f6d-a2ea-315e49b8a832
+                transform: ""
+          - columnReference:
+              columnCounter: e904be60-2975-414b-aaac-18126689599b
+              stepCounter: 7a1678be-3139-44e4-b1a9-52f2f1e775df
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRODUCT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 54f8640d-f741-46d8-bb25-3206ec344cae
+                    stepCounter: 5a42978a-ff38-4f6d-a2ea-315e49b8a832
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: DIMPRODUCT
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'DIMPRODUCT') }} "DIMPRODUCT"
+            name: STG_DIMPRODUCT
+            noLinkRefs: []
+      name: STG_DIMPRODUCT
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 7a1678be-3139-44e4-b1a9-52f2f1e775df
