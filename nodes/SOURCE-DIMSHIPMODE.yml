@@ -1,0 +1,49 @@
+steps:
+  DIMSHIPMODE-fd3c8619-d3af-4909-9540-7a4f4814d7aa:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1760aec2-a33e-4d84-9877-b5bde963ab49
+              stepCounter: fd3c8619-d3af-4909-9540-7a4f4814d7aa
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: KEY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f58d34ce-d99c-40f1-906d-b8572825177a
+              stepCounter: fd3c8619-d3af-4909-9540-7a4f4814d7aa
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: SHIPMODE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'DIMSHIPMODE') }}
+      name: DIMSHIPMODE
+      schema: ""
+      sqlType: Source
+      table: DIMSHIPMODE
+      type: sourceInput
+    stepCounter: fd3c8619-d3af-4909-9540-7a4f4814d7aa

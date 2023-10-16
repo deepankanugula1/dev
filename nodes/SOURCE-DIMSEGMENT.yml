@@ -1,0 +1,49 @@
+steps:
+  DIMSEGMENT-11c1c9e0-5ba3-45db-b308-892aadbe3fdf:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 91881396-d301-47ee-a386-937398f643cc
+              stepCounter: 11c1c9e0-5ba3-45db-b308-892aadbe3fdf
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: KEY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 50701251-56fa-4b8c-906b-149fb80fd134
+              stepCounter: 11c1c9e0-5ba3-45db-b308-892aadbe3fdf
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: SEGMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'DIMSEGMENT') }}
+      name: DIMSEGMENT
+      schema: ""
+      sqlType: Source
+      table: DIMSEGMENT
+      type: sourceInput
+    stepCounter: 11c1c9e0-5ba3-45db-b308-892aadbe3fdf

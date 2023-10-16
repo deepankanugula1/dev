@@ -1,0 +1,64 @@
+steps:
+  DIMPRODUCT-5a42978a-ff38-4f6d-a2ea-315e49b8a832:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3fda4f90-5780-457b-8fb4-47db5953f838
+              stepCounter: 5a42978a-ff38-4f6d-a2ea-315e49b8a832
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: KEY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a267874e-aaa5-43eb-bd74-5700e5b61dad
+              stepCounter: 5a42978a-ff38-4f6d-a2ea-315e49b8a832
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: PRODUCTCATEGORY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 54f8640d-f741-46d8-bb25-3206ec344cae
+              stepCounter: 5a42978a-ff38-4f6d-a2ea-315e49b8a832
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: PRODUCT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'DIMPRODUCT') }}
+      name: DIMPRODUCT
+      schema: ""
+      sqlType: Source
+      table: DIMPRODUCT
+      type: sourceInput
+    stepCounter: 5a42978a-ff38-4f6d-a2ea-315e49b8a832

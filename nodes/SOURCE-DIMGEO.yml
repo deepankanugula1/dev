@@ -1,0 +1,79 @@
+steps:
+  DIMGEO-7ca2c715-60e8-41f3-8dae-0ae6da56842d:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c060f4b8-0af6-4790-a7b8-6c5a64c66e47
+              stepCounter: 7ca2c715-60e8-41f3-8dae-0ae6da56842d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: CITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 57f152a2-8541-45f4-96ab-76c0ed242c8b
+              stepCounter: 7ca2c715-60e8-41f3-8dae-0ae6da56842d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: STATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e8429ca4-4d4d-4ed8-826a-62e9010bce3d
+              stepCounter: 7ca2c715-60e8-41f3-8dae-0ae6da56842d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: COUNTRY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7d43cfc4-35c4-4e40-85ee-5f7d8e09432a
+              stepCounter: 7ca2c715-60e8-41f3-8dae-0ae6da56842d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: REGION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'DIMGEO') }}
+      name: DIMGEO
+      schema: ""
+      sqlType: Source
+      table: DIMGEO
+      type: sourceInput
+    stepCounter: 7ca2c715-60e8-41f3-8dae-0ae6da56842d

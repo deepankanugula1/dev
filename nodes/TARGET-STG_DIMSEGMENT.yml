@@ -1,0 +1,64 @@
+steps:
+  STG_DIMSEGMENT-ad621abc-c563-4934-b171-1efda1242ac3:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 499c2d7e-1d06-49ef-8240-264e45ff810a
+              stepCounter: ad621abc-c563-4934-b171-1efda1242ac3
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 91881396-d301-47ee-a386-937398f643cc
+                    stepCounter: 11c1c9e0-5ba3-45db-b308-892aadbe3fdf
+                transform: ""
+          - columnReference:
+              columnCounter: aedc96da-0786-4470-a137-72c82f34458f
+              stepCounter: ad621abc-c563-4934-b171-1efda1242ac3
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SEGMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 50701251-56fa-4b8c-906b-149fb80fd134
+                    stepCounter: 11c1c9e0-5ba3-45db-b308-892aadbe3fdf
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: DIMSEGMENT
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'DIMSEGMENT') }} "DIMSEGMENT"
+            name: STG_DIMSEGMENT
+            noLinkRefs: []
+      name: STG_DIMSEGMENT
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: ad621abc-c563-4934-b171-1efda1242ac3

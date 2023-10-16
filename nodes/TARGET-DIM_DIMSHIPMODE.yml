@@ -1,0 +1,63 @@
+steps:
+  DIM_DIMSHIPMODE-4ebf2d2b-d9a8-48cc-b7b6-981d17189914:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: aeda17fa-0488-445f-ac31-a13691499336
+              stepCounter: 4ebf2d2b-d9a8-48cc-b7b6-981d17189914
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0dee2bd9-7418-45e1-8cd6-1323a7db0715
+                    stepCounter: 2a94fc78-e7b0-471d-81c5-2fae50627fba
+                transform: ""
+          - columnReference:
+              columnCounter: c37b456b-0caf-4d43-a223-3d55ea3be928
+              stepCounter: 4ebf2d2b-d9a8-48cc-b7b6-981d17189914
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SHIPMODE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a8d59d05-8697-4422-9207-7609049ebd73
+                    stepCounter: 2a94fc78-e7b0-471d-81c5-2fae50627fba
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: STG_DIMSHIPMODE
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'STG_DIMSHIPMODE') }} "STG_DIMSHIPMODE"
+            name: DIM_DIMSHIPMODE
+            noLinkRefs: []
+      name: DIM_DIMSHIPMODE
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: 4ebf2d2b-d9a8-48cc-b7b6-981d17189914
