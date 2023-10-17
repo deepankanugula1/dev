@@ -83,7 +83,7 @@ steps:
               - columnReferences:
                   - columnCounter: 9c531a0b-777d-469e-9e3e-df175e1d85a4
                     stepCounter: b9ceb765-0106-4c92-8820-e2123b2bfba8
-                transform: ""
+                transform: "{{LOWERCASE('\"STG_ECOMMERCE\".\"SHIPMODE\"') }}"
           - columnReference:
               columnCounter: eddecb26-8571-464e-bb5b-4192a0c16028
               stepCounter: beef95d1-b8ed-4505-a8de-f29d8800ee64
@@ -195,7 +195,7 @@ steps:
               - columnReferences:
                   - columnCounter: 30f7967e-9209-4e05-ad8b-5152ca0a55f7
                     stepCounter: b9ceb765-0106-4c92-8820-e2123b2bfba8
-                transform: ""
+                transform: "{{UPPERCASE('\"STG_ECOMMERCE\".\"ORDERPRIORITY\"')}}"
           - columnReference:
               columnCounter: d2d735d5-b6ed-4569-832f-7016ba03db4b
               stepCounter: beef95d1-b8ed-4505-a8de-f29d8800ee64

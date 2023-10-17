@@ -14,12 +14,28 @@ locations:
       "14":
         database: SALES
         schema: SALES
+      "15":
+        database: SALES
+        schema: SALES
   TARGET:
     mappingDefinitions:
       "14":
         database: PC_COALESCE_DB
         schema: PUBLIC
-macros: {}
+      "15":
+        database: TRAGET
+        schema: TARGET
+macros:
+  Macro-1:
+    id: "1"
+    macroString: |-
+      {%- macro UPPERCASE(column) -%}
+         UPPER ({{ column }})
+      {%- endmacro %}
+      
+      {%- macro LOWERCASE(column) -%}
+         LOWER ({{ column }})
+      {%- endmacro %}
 packages: {}
 projects: {}
 stepTypes:
